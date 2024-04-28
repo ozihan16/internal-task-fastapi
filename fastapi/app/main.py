@@ -17,7 +17,7 @@ def hello_world():
     should_fail_400 = percentile_true(20)
     if should_fail_400:
         raise HTTPException(status_code=400, detail="[400] Bad Request")
-    should_fail_404 = percentile_true(40)
+    should_fail_404 = percentile_true(50)
     if should_fail_404:
         raise HTTPException(status_code=404, detail="[404] Not Found")
     return {"message": "[200] OK"}
