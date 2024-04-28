@@ -11,7 +11,7 @@ app = FastAPI()
 
 @app.get("/")
 def hello_world():
-    should_fail_500 = percentile_true(40)
+    should_fail_500 = percentile_true(50)
     if should_fail_500:
         raise HTTPException(status_code=500, detail="[500] Internal Server Error")
     should_fail_400 = percentile_true(20)
